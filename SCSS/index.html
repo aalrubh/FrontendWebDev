@@ -2,7 +2,6 @@
 <head>
     <link rel="stylesheet" href="Assets/style/css/index.css">
     <link rel="Icon" href="Assets/images/Icon.jpg" type=".jpg">
-
     <title>Snowflake Solutions Portal</title>
 </head>
 <body>
@@ -59,32 +58,44 @@
     <div id="content">
         <main id="main-body">
             <section class = "body-section">
-                <h2>Request Leave</h2>
-                    <label for = "leave-reason-selection">Leave Reason</label>
-                    <select name = "leave-reason-selection">
-                        <option value="" disabled selected>Select leave reason</option>
-                        <option>Annual Leave</option>
-                        <option>Sick Leave</option>
-                        <option>Maternity Leave</option>
-                        <option>Paternity Leave</option>
-                        <option>Hajj Leave</option>
-                        <option>Emergency Leave</option>
-                        <option>Bereavement Leave</option>
-                        <option>Marriage Leave</option>
-                    </select>
+                <h2 class = "section-header">Request Leave</h2>
+                <div class = "form-area">
+                    <div class = "selection-box">
+                        <label class = "input-label" for = "leave-reason-selection">Leave Reason</label>
+                        <select  id = "leave-reason" class = "input-box" name = "leave-reason-selection">
+                            <option value="" disabled selected>Select leave reason</option>
+                            <option>Annual Leave</option>
+                            <option>Sick Leave</option>
+                            <option>Maternity Leave</option>
+                            <option>Paternity Leave</option>
+                            <option>Hajj Leave</option>
+                            <option>Emergency Leave</option>
+                            <option>Bereavement Leave</option>
+                            <option>Marriage Leave</option>
+                        </select>
+                    </div>
 
-                    <label for = "from-date-input">From:</label>
-                    <input type ="date" name = "from-date-input">
+                    <div class = "selection-box">
+                        <label class = "input-label" for = "from-date-input">From:</label>
+                        <input class = "input-box" type ="date" name = "from-date-input">
+                    </div> 
 
-                    <label for = "to-date-input">To:</label>
-                    <input type ="date" name = "to-date-input">
+                    <div class = "selection-box">
+                        <label class = "input-label" for = "to-date-input">To:</label>
+                        <input class = "input-box" type ="date" name = "to-date-input">
+                    </div>
 
-                    <label for = "file-proof">File</label>
-                    <input type ="file" name ="file-proof">
-
-                    <input type ="week">
-                    
-                    <input type="button" value="Submit" title="submit">
+                    <div class = "selection-box">
+                        <label class = "input-label" for = "file-proof">File</label>
+                        <input class = "input-box" type ="file" name ="file-proof">
+                    </div>
+                </div>
+                <div class = "button-box">
+                    <input id = "submit-button" type="button" value="Submit" title="submit">
+                </div>
+                <div>
+                    <h2 id ="status-message"></h2>
+                </div>
             </section>
         </main>
 
@@ -95,6 +106,6 @@
             <p>&copy; 2025 Snowflake Solutions. All rights reserved.</p>
         </footer>
     </div>
-
+    <script src = "scripts/index.js"></script>
 </body>
 </html>

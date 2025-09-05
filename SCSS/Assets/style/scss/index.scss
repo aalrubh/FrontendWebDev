@@ -10,6 +10,19 @@
     flex-direction: $direction;
 }
 
+.button {
+    text-align: center;
+    text-justify: center;
+    border-radius: 10px;
+    border-color: $border-color;
+    background-color: aliceblue;
+}
+
+.status-message {
+    text-align: center;
+    margin: 2% 0;
+}
+
 body {
     background: $background-color;
     width: 100%;
@@ -34,7 +47,7 @@ body {
     #profile-picture {
         width: 45%;
         border: 1px solid black;
-        border-radius: 50px;
+        border-radius: 100px;
         margin: 20px auto;
     }
 
@@ -60,7 +73,7 @@ body {
 
             &:hover {
                 border-radius: 5px;
-                box-shadow: 1px 1px 5px rgb(11, 44, 73);
+                box-shadow: 1px 1px 5px $text-color;
             }
         }
     }
@@ -85,6 +98,7 @@ body {
     justify-content: space-between;
 
     #current-page {
+        margin: auto 0;
         margin-right: auto;
     }
 
@@ -95,7 +109,9 @@ body {
         text-decoration: none;
         width: 7%;
         color: $text-color;
-        font-size: medium;
+
+        font-size: large;
+        font-weight: weight(medium);
 
         .icon-img {
             max-width: 30%;
@@ -114,19 +130,73 @@ body {
     padding: 1%;
     grid-area: 2 / 2 / 3 / 3;
 
-    #main-body {
-        .body-section {
-            margin-top: 1%;
-            min-width: 85%;
-            padding: 10px;
-            border: 1px solid $border-color;
-            border-radius: 10px;
-        }
-    }
+
 
     footer {
         margin-top: auto;
         margin-left: auto;
         text-align: center;
+    }
+}
+
+#main-body {
+    .body-section {
+
+        margin-top: 1%;
+        min-width: 85%;
+        padding: 10px;
+        border: 1px solid $border-color;
+        background-color: $background-color;
+        border-radius: 10px;
+
+        .section-header {
+            font-size: xx-large;
+            color: $text-color;
+            font-weight: weight(medium);
+            text-align: center;
+            margin: 20px auto;
+
+        }
+        .form-area {
+            @include FlexCell(row);
+            .selection-box {
+                @include FlexCell(column);
+                width: 50%;
+                padding: 0 5px;
+                .input-label {
+                    color: $text-color;
+                    font-weight: weight(bold);
+                    font-size: large;
+                    padding: 0.5em 0;
+                }
+
+                .input-box {
+                    padding: 0.5em 0;
+                    margin-bottom: 2%;
+                }
+            }
+        }
+        .button-box {
+            margin: 10px 0;
+            justify-self: center;
+
+            #submit-button {
+                @extend .button;
+
+                font-size: large;
+                padding: 5px 75px;
+
+            }
+        }
+    }
+
+    .error-status {
+        @extend .status-message;
+        color: $error-color;
+    }
+
+    .success-status {
+        @extend .status-message;
+        color: $success-color;
     }
 }

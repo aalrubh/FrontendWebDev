@@ -1,193 +1,161 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    overflow: auto;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f9f9f9;
-    padding: 20px;
-    margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+  padding: 20px;
 }
 
 header {
-    width: 100%;
-    display: flex;
-    color: black;
-    padding: 20px 0;
-    align-items: center;
-    background-color: #b9dcf842;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+  background-color: #b9dcf842;
 }
 
-img {
-    margin: none;
-    max-width: 6%;
-    height: auto;
-    border-radius: 8px;
-    float: left;
-    margin-right: 30px;
-    margin-left: 30px;
+header .logo {
+  max-width: 6%;
+  height: auto;
+  border-radius: 8px;
+  margin: 0 30px 0 0;
 }
 
 header h1 {
-    font-size: 2.5rem;
-    margin-right: 15px;
+  font-size: 2.5rem;
+  margin-right: auto;
 }
 
 #nav-list {
-    display: flex;    
+  display: flex;
+  gap: 40px;
+  list-style: none;
+  padding-left: 0;
 }
 
-.nav-item {
-    color: #0078d7;
-    font-weight: bold;
-    font-size: 20px;
-    border-radius: 10px;
-    padding: 5px;
-
-    margin-left: 60px;
-    margin-right: 60px;
-
-    text-shadow: 1px 1px 1px #3333333d;
+.nav-item a {
+  text-decoration: none;
+  color: #0078d7;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  text-shadow: 1px 1px 1px #3333333d;
 }
 
 .nav-item a:hover {
-    background-color: #3333330c;
-    border-radius: 10px;
-}
-
-.nav-item a {
-    display: inline-block;
-    padding: 5px;
-}
-
-.nav-item a {
-    text-decoration: none;
-
-}
-
-.nav-item a:visited {
-    color: #0078d7;
+  background-color: #3333330c;
 }
 
 #services-list {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 0;
-    margin: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  list-style: none;
+  padding-left: 0;
 }
 
-.service-item{
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 25%;
-    float: left;
-    margin: 10px 20px;
-    border: #ffffff 1px solid;
-    background: linear-gradient(100deg,#b9dcf8, #baadeb);
-    border-radius: 10px;
-    padding: 10px;
-    font-weight: bold;
-    list-style: none;
-    
+.service-item {
+  text-align: center;
+  background: linear-gradient(100deg, #b9dcf8, #baadeb);
+  border-radius: 10px;
+  padding: 20px;
+  font-weight: bold;
+  color: #000;
 }
 
-section,article {
-    clear: both;
-    margin: 40px 0;
-    padding: 20px;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    overflow: auto;
-    max-width: 90%;
-    margin-left: auto;
-    margin-right: auto;
+section,
+article {
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  max-width: 90%;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 h2 {
-    color: #0078d7;
-    margin-bottom: 10px;
+  color: #0078d7;
+  margin-bottom: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.phone-split {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.phone-split {
+  display: flex;
+  gap: 10px;
+}
+
+.phone-split select {
+  flex: 0 0 25%;
+}
+
+.phone-split input {
+  flex: 1;
 }
 
 form label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
 }
 
-form input, form select, form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    
-}
-
-#name-div, #email-div, #phone-div, #company-div {
-    width: 50%;
-    float: left;
-    margin: auto;
-;
-}
-
-#message-div {
-    padding: 10px;
-    width: 100%;
-    display: block;
-    clear: both;
-}
-
-#message-txt {
-    display: block;
-    clear: both;
+form input,
+form select,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 #message {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    min-height: 100px;
-    resize: vertical;
+  min-height: 100px;
+  resize: vertical;
 }
 
-#Phone {
-    width: 15%;
+input[type="submit"] {
+  align-self: center;
+  width: 200px;
+  padding: 10px;
+  font-weight: bold;
+  background: #0078d7;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-#Phone-number {
-    width: 85%;
-
+input[type="submit"]:hover {
+  background: #005ea6;
 }
-
-input[type ="submit"] {
-    display: block;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    width: 25%;
-}
-
 
 footer {
-    text-align: center;
-    margin-top: 20px;
-    padding: 10px 0;
-    border-radius: 5px;
-    background: #3333330a;
-    color: black;
-    border-radius: 8px;
-}
-
-form div {
-    padding: 10px;
+  text-align: center;
+  margin-top: 20px;
+  padding: 20px;
+  background: #3333330a;
+  border-radius: 8px;
 }

@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 function calculateArea(width, height) {
     return width * height;
 }
@@ -25,4 +23,5 @@ x = "String";
 console.log(x);
 x = 2025;
 console.log(x);
+export {};
 //# sourceMappingURL=index.js.map

@@ -1,0 +1,191 @@
+/*
+    This file is used to zero the spacing and its calculation
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*
+    This file is used for default fonts and their weights
+*/
+/*
+    This file will be used for the primary colors of
+*/
+.button, #main-body .body-section .button-box #submit-button {
+  text-align: center;
+  text-justify: center;
+  border-radius: 10px;
+  border-color: #d1d5db;
+  background-color: aliceblue;
+}
+
+.status-message, #main-body .success-status, #main-body .error-status {
+  text-align: center;
+  margin: 2% 0;
+}
+
+body {
+  background: #f9fbfc;
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+  grid-template-rows: auto 1fr;
+}
+
+#page-header {
+  display: flex;
+  flex-direction: column;
+  grid-area: 1/1/3/2;
+  background-image: linear-gradient(120deg, rgb(114, 139, 161), rgb(193, 211, 228));
+  border-right: 2px solid black;
+  width: 100%;
+  padding: 5%;
+}
+#page-header #profile-picture {
+  width: 45%;
+  border: 1px solid black;
+  border-radius: 100px;
+  margin: 20px auto;
+}
+#page-header #profile-name {
+  font-size: x-large;
+  margin: 0 auto;
+  text-align: center;
+}
+#page-header #nav-bar {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+#page-header #nav-bar .nav-item {
+  width: 100%;
+  margin: 6% 0;
+  font-size: larger;
+  font-weight: 500;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+}
+#page-header #nav-bar .nav-item:hover {
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px #1e1e1e;
+}
+#page-header #end-co-name {
+  text-align: center;
+  margin-top: auto;
+  padding-bottom: 0;
+}
+
+#top-bar {
+  grid-area: 1/2/2/3;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: none;
+  justify-content: none;
+  flex-direction: row;
+  box-shadow: 1px 1px 1px #d1d5db;
+  border-radius: 0 0 10px 10px;
+  margin: 0 1%;
+  padding: 1%;
+  justify-content: space-between;
+}
+#top-bar #current-page {
+  margin: auto 0;
+  margin-right: auto;
+}
+#top-bar .settings-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: none;
+  justify-content: none;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  width: 7%;
+  color: #1e1e1e;
+  font-size: large;
+  font-weight: 500;
+}
+#top-bar .settings-item .icon-img {
+  max-width: 30%;
+  margin: 0 10px;
+}
+#top-bar .settings-item:hover {
+  box-shadow: 1px 1px 1px #d1d5db;
+}
+
+#content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: none;
+  justify-content: none;
+  flex-direction: column;
+  margin-top: 0.5%;
+  padding: 1%;
+  grid-area: 2/2/3/3;
+}
+#content footer {
+  margin-top: auto;
+  margin-left: auto;
+  text-align: center;
+}
+
+#main-body .body-section {
+  margin-top: 1%;
+  min-width: 85%;
+  padding: 10px;
+  border: 1px solid #d1d5db;
+  background-color: #f9fbfc;
+  border-radius: 10px;
+}
+#main-body .body-section .section-header {
+  font-size: xx-large;
+  color: #1e1e1e;
+  font-weight: 500;
+  text-align: center;
+  margin: 20px auto;
+}
+#main-body .body-section .form-area {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: none;
+  justify-content: none;
+  flex-direction: row;
+}
+#main-body .body-section .form-area .selection-box {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: none;
+  justify-content: none;
+  flex-direction: column;
+  width: 50%;
+  padding: 0 5px;
+}
+#main-body .body-section .form-area .selection-box .input-label {
+  color: #1e1e1e;
+  font-weight: 700;
+  font-size: large;
+  padding: 0.5em 0;
+}
+#main-body .body-section .form-area .selection-box .input-box {
+  padding: 0.5em 0;
+  margin-bottom: 2%;
+}
+#main-body .body-section .button-box {
+  margin: 10px 0;
+  justify-self: center;
+}
+#main-body .body-section .button-box #submit-button {
+  font-size: large;
+  padding: 5px 75px;
+}
+#main-body .error-status {
+  color: #e53935;
+}
+#main-body .success-status {
+  color: #4caf50;
+}/*# sourceMappingURL=index.css.map */

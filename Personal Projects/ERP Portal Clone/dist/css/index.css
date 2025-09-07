@@ -1,0 +1,160 @@
+/*
+    This file is used to zero the spacing and its calculation
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*
+    This file is used for default fonts and their weights
+*/
+/*
+    This file will be used for the primary colors of
+*/
+body {
+  min-height: 100vh;
+  min-height: 100vdh;
+  background-color: #0B0F14;
+  color: #E6EDF3;
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+ul {
+  list-style: none;
+}
+
+#side-bar {
+  grid-area: 1/1/2/2;
+  background: #0E141B;
+  min-height: 100vdh;
+  border-right: 1px solid #263244;
+  padding: 20px 1em;
+  width: 350px;
+  text-wrap: nowrap;
+  transition: 300ms ease-in-out;
+}
+#side-bar #logo-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  margin-bottom: 16px;
+}
+#side-bar #logo-item .logo {
+  font-weight: 700;
+  margin-right: auto;
+}
+#side-bar a, #side-bar .dropdown_btn, #side-bar .logo {
+  border-radius: 0.5em;
+  padding: 0.85em;
+  color: #E6EDF3;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: none;
+  flex-direction: row;
+  gap: 1em;
+}
+#side-bar .dropdown_btn {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+}
+#side-bar .dropdown_btn svg {
+  flex-shrink: 0;
+  fill: #E6EDF3;
+  width: 25px;
+  height: 25px;
+}
+#side-bar a span, #side-bar .dropdown_btn span {
+  flex-grow: 1;
+}
+#side-bar a:hover, #side-bar .dropdown_btn:hover {
+  background: #131A22;
+  color: #E6EDF3;
+}
+#side-bar .sub-menu {
+  margin: 6px 0 12px 0;
+  padding-left: 8px;
+  list-style: none;
+}
+#side-bar .sub-menu a {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: none;
+  flex-direction: row;
+  gap: 10px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  color: #A3ADBA;
+  text-decoration: none;
+}
+#side-bar .sub-menu a.active {
+  color: #E6EDF3;
+  background: rgba(37, 99, 235, 0.12);
+  border: 1px solid rgba(37, 99, 235, 0.35);
+}
+
+#side-bar.close {
+  padding: 5px;
+  width: 60px;
+}
+#side-bar.close span, #side-bar.close #sidebar-arrow {
+  display: none;
+}
+
+main {
+  grid-area: 1/2/2/3;
+  margin: 1%;
+}
+main .container {
+  border: 1px solid #263244;
+  border-radius: 1em;
+  margin-bottom: 20px;
+  padding: min(3em, 15%);
+}
+main .container h2, main .container p {
+  margin-top: 1em;
+}
+
+.sub-menu {
+  display: grid;
+  grid-template-rows: 0fr;
+  padding-left: 2em;
+  transition: 300ms ease-in-out;
+}
+.sub-menu div {
+  overflow: hidden;
+}
+
+.sub-menu.show {
+  grid-template-rows: 1fr;
+}
+
+.dropdown_btn svg {
+  transition: 200ms ease;
+}
+
+.rotate svg:last-child {
+  rotate: 180deg;
+}
+
+#toggle-button {
+  margin-left: auto;
+  padding: 1em;
+  border: none;
+  border-radius: 0.5em;
+  background: none;
+  cursor: pointer;
+}
+#toggle-button svg {
+  transition: rotate 150ms ease;
+}/*# sourceMappingURL=index.css.map */

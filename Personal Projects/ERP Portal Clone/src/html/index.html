@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="shortcut icon" href="../assets/icons/portal.svg" type="image/x-icon">
+        <link rel="stylesheet" href="../../dist/css/index.css">
+        <script type = "text/javascript" src="../js/index.js" defer></script>
+        <title>REC Portal</title>
+    </head>
+    <body>
+        <nav id="side-bar">
+            <ul>
+                <li id = "logo-item">
+                    <span class="logo">REC</span>
+                    <button onclick = toggleSideBar() id="toggle-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+                    </button>
+                </li>
+
+                <li>
+                    <button onclick = toggleSubMenu(this) class="dropdown_btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M520-600v-240h320v240H520ZM120-440v-400h320v400H120Zm400 320v-400h320v400H520Zm-400 0v-240h320v240H120Zm80-400h160v-240H200v240Zm400 320h160v-240H600v240Zm0-480h160v-80H600v80ZM200-200h160v-80H200v80Zm160-320Zm240-160Zm0 240ZM360-280Z"/></svg>
+                        <span>Dashboard</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id = "sidebar-arrow"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+                    
+                    <ul class="sub-menu">
+                        <div>
+                            <li><a href="#" class="active">Overview / KPIs</a></li>
+                            <li><a href="#">Custom Widgets</a></li>
+                            <li><a href="#">Notifications & Alerts</a></li>
+                            <li><a href="#">Recent Activities</a></li>
+                        </div>
+                    </ul>
+                </li>
+
+                <li>
+                    <button onclick = toggleSubMenu(this) class="dropdown_btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M40-160v-112q0-34 17.5-62.5T104-378q62-31 126-46.5T360-440q66 0 130 15.5T616-378q29 15 46.5 43.5T680-272v112H40Zm720 0v-120q0-44-24.5-84.5T666-434q51 6 96 20.5t84 35.5q36 20 55 44.5t19 53.5v120H760ZM360-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47Zm400-160q0 66-47 113t-113 47q-11 0-28-2.5t-28-5.5q27-32 41.5-71t14.5-81q0-42-14.5-81T544-792q14-5 28-6.5t28-1.5q66 0 113 47t47 113ZM120-240h480v-32q0-11-5.5-20T580-306q-54-27-109-40.5T360-360q-56 0-111 13.5T140-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T440-640q0-33-23.5-56.5T360-720q-33 0-56.5 23.5T280-640q0 33 23.5 56.5T360-560Zm0 320Zm0-400Z"/></svg>
+                        <span>Human Resources</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id = "sidebar-arrow"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+
+                    <ul class="sub-menu">
+                        <div>
+                            <li><a href="#">Employee Directory</a></li>
+                            <li><a href="#">Attendance Tracker</a></li>
+                            <li><a href="#">Leave Requests</a></li>
+                            <li><a href="#">Absence Management</a></li>
+                            <li><a href="#">Payroll & Compensation</a></li>
+                            <li><a href="#">Performance Reviews</a></li>
+                            <li><a href="#">Recruitment / Applicant Tracking</a></li>
+                            <li><a href="#">Training & Development</a></li>
+                            <li><a href="#">HR Analytics</a></li>
+                            <li><a href="#">Benefits Administration</a></li>
+                            <li><a href="#">Timesheets</a></li>
+                            <li><a href="#">Org Chart</a></li>
+                        </div>
+                    </ul>
+                </li>
+
+                <li>
+                    <button onclick = toggleSubMenu(this) class="dropdown_btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M200-120q-33 0-56.5-23.5T120-200v-640h80v640h640v80H200Zm40-120v-360h160v360H240Zm200 0v-560h160v560H440Zm200 0v-200h160v200H640Z"/></svg>
+                        <span>Finance & Accounting</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id = "sidebar-arrow"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+                    
+                    <ul class="sub-menu">
+                        <div>
+                            <li><a href="#">General Ledger</a></li>
+                            <li><a href="#">Accounts Payable</a></li>
+                            <li><a href="#">Accounts Receivable</a></li>
+                            <li><a href="#">Expense Management</a></li>
+                            <li><a href="#">Budgeting & Forecasting</a></li>
+                            <li><a href="#">Financial Reports</a></li>
+                            <li><a href="#">Fixed Asset Management</a></li>
+                            <li><a href="#">Tax Management</a></li>
+                            <li><a href="#">Audit Trail</a></li>
+                            <li><a href="#">Bank Reconciliation</a></li>
+                        </div>
+                    </ul>
+                </li>
+
+                <li>
+                    <button onclick = toggleSubMenu(this) class="dropdown_btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M475-160q4 0 8-2t6-4l328-328q12-12 17.5-27t5.5-30q0-16-5.5-30.5T817-607L647-777q-11-12-25.5-17.5T591-800q-15 0-30 5.5T534-777l-11 11 74 75q15 14 22 32t7 38q0 42-28.5 70.5T527-522q-20 0-38.5-7T456-550l-75-74-175 175q-3 3-4.5 6.5T200-435q0 8 6 14.5t14 6.5q4 0 8-2t6-4l136-136 56 56-135 136q-3 3-4.5 6.5T285-350q0 8 6 14t14 6q4 0 8-2t6-4l136-135 56 56-135 136q-3 2-4.5 6t-1.5 8q0 8 6 14t14 6q4 0 7.5-1.5t6.5-4.5l136-135 56 56-136 136q-3 3-4.5 6.5T454-180q0 8 6.5 14t14.5 6Zm-1 80q-37 0-65.5-24.5T375-166q-34-5-57-28t-28-57q-34-5-56.5-28.5T206-336q-38-5-62-33t-24-66q0-20 7.5-38.5T149-506l232-231 131 131q2 3 6 4.5t8 1.5q9 0 15-5.5t6-14.5q0-4-1.5-8t-4.5-6L398-777q-11-12-25.5-17.5T342-800q-15 0-30 5.5T285-777L144-635q-9 9-15 21t-8 24q-2 12 0 24.5t8 23.5l-58 58q-17-23-25-50.5T40-590q2-28 14-54.5T87-692l141-141q24-23 53.5-35t60.5-12q31 0 60.5 12t52.5 35l11 11 11-11q24-23 53.5-35t60.5-12q31 0 60.5 12t52.5 35l169 169q23 23 35 53t12 61q0 31-12 60.5T873-437L545-110q-14 14-32.5 22T474-80Zm-99-560Z"/></svg>
+                        <span>Procurement / Purchasing</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id = "sidebar-arrow"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+
+                    <ul class="sub-menu">
+                        <div>
+                            <li><a href="#">Purchase Requests</a></li>
+                            <li><a href="#">Purchase Orders</a></li>
+                            <li><a href="#">Vendor Management</a></li>
+                            <li><a href="#">Quotations & Tenders</a></li>
+                            <li><a href="#">Contract Management</a></li>
+                            <li><a href="#">Procurement Analytics</a></li>
+                            <li><a href="#">Goods Receipt Notes</a></li>
+                            <li><a href="#">Invoice Matching</a></li>
+                        </div>
+                    </ul>
+                </li>
+
+                <li>
+                    <button onclick = toggleSubMenu(this) class="dropdown_btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M200-80q-33 0-56.5-23.5T120-160v-451q-18-11-29-28.5T80-680v-120q0-33 23.5-56.5T160-880h640q33 0 56.5 23.5T880-800v120q0 23-11 40.5T840-611v451q0 33-23.5 56.5T760-80H200Zm0-520v440h560v-440H200Zm-40-80h640v-120H160v120Zm200 280h240v-80H360v80Zm120 20Z"/></svg>
+                        <span>Inventory & Warehouse</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id = "sidebar-arrow"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+
+                   <ul class="sub-menu">
+                        <div>
+                            <li><a href="#">Inventory Dashboard</a></li>
+                            <li><a href="#">Stock Management</a></li>
+                            <li><a href="#">Barcode Scanning</a></li>
+                            <li><a href="#">Warehouse Transfers</a></li>
+                            <li><a href="#">Batch/Lot Tracking</a></li>
+                            <li><a href="#">Reorder Management</a></li>
+                            <li><a href="#">Inventory Valuation</a></li>
+                            <li><a href="#">Stock Adjustments</a></li>
+                            <li><a href="#">Inventory Audits</a></li>
+                        </div>
+                    </ul>
+                </li>
+
+                <li>
+                    <button onclick = toggleSubMenu(this) class="dropdown_btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M200-120q-50 0-85-35t-35-85q0-50 35-85t85-35h560q50 0 85 35t35 85q0 50-35 85t-85 35H200Zm0-80h560q17 0 28.5-11.5T800-240q0-17-11.5-28.5T760-280H200q-17 0-28.5 11.5T160-240q0 17 11.5 28.5T200-200Zm200-240q-17 0-28.5-11.5T360-480v-320q0-17 11.5-28.5T400-840h320q17 0 28.5 11.5T760-800v320q0 17-11.5 28.5T720-440H400Zm40-80h240v-240H440v240Zm-360-2v-77h197v77H80Zm400-118h160v-79H480v79Zm-320 0h117v-79H160v79Zm280 120v-240 240Z"/></svg>
+                        <span>Supply Chain & Logistics</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id = "sidebar-arrow"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+
+                   <ul class="sub-menu">
+                        <div>
+                            <li><a href="#">Supply Chain Planning</a></li>
+                            <li><a href="#">Shipment Tracking</a></li>
+                            <li><a href="#">Delivery Scheduling</a></li>
+                            <li><a href="#">Carrier Integration</a></li>
+                            <li><a href="#">Fleet Management</a></li>
+                            <li><a href="#">Route Optimization</a></li>
+                            <li><a href="#">Logistics Reports</a></li>
+                        </div>
+                    </ul>
+                </li>
+
+                <li>
+                    <button onclick = toggleSubMenu(this) class="dropdown_btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M856-390 570-104q-12 12-27 18t-30 6q-15 0-30-6t-27-18L103-457q-11-11-17-25.5T80-513v-287q0-33 23.5-56.5T160-880h287q16 0 31 6.5t26 17.5l352 353q12 12 17.5 27t5.5 30q0 15-5.5 29.5T856-390ZM513-160l286-286-353-354H160v286l353 354ZM260-640q25 0 42.5-17.5T320-700q0-25-17.5-42.5T260-760q-25 0-42.5 17.5T200-700q0 25 17.5 42.5T260-640Zm220 160Z"/></svg>
+                        <span>Sales & CRM</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id = "sidebar-arrow"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+
+                   <ul class="sub-menu">
+                        <div>
+                            <li><a href="#">Leads & Opportunities</a></li>
+                            <li><a href="#">Client Database</a></li>
+                            <li><a href="#">Quotation Management</a></li>
+                            <li><a href="#">Sales Orders</a></li>
+                            <li><a href="#">Invoicing</a></li>
+                            <li><a href="#">Sales Forecasting</a></li>
+                            <li><a href="#">Customer Interaction Logs</a></li>
+                            <li><a href="#">Call/Meeting Scheduler</a></li>
+                            <li><a href="#">CRM Analytics</a></li>
+                        </div>
+                    </ul>
+                </li>
+
+                <li>
+                    <button onclick = toggleSubMenu(this) class="dropdown_btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-580q-17 0-28.5-11.5T440-620q0-17 11.5-28.5T480-660q17 0 28.5 11.5T520-620q0 17-11.5 28.5T480-580Zm-40-140v-200h80v200h-80ZM280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM40-800v-80h131l170 360h280l156-280h91L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68.5-39t-1.5-79l54-98-144-304H40Z"/></svg>
+                        <span>Manufacturing / Production</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id = "sidebar-arrow"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+
+                   <ul class="sub-menu">
+                        <div>
+                            <li><a href="#">Work Orders</a></li>
+                            <li><a href="#">Bill of Materials (BOM)</a></li>
+                            <li><a href="#">Production Planning</a></li>
+                            <li><a href="#">Shop Floor Control</a></li>
+                            <li><a href="#">Quality Control</a></li>
+                            <li><a href="#">Maintenance Scheduling</a></li>
+                            <li><a href="#">Downtime Tracking</a></li>
+                            <li><a href="#">Manufacturing Analytics</a></li>
+                        </div>
+                    </ul>
+                </li>
+
+                <li>
+                    <button onclick = toggleSubMenu(this) class="dropdown_btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h168q13-36 43.5-58t68.5-22q38 0 68.5 22t43.5 58h168q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Zm80-80h280v-80H280v80Zm0-160h400v-80H280v80Zm0-160h400v-80H280v80Zm200-190q13 0 21.5-8.5T510-820q0-13-8.5-21.5T480-850q-13 0-21.5 8.5T450-820q0 13 8.5 21.5T480-790ZM200-200v-560 560Z"/></svg>
+                        <span>Projects & Tasks</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id = "sidebar-arrow"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+
+                    <ul class="sub-menu">
+                        <div>
+                            <li><a href="#">Project Dashboard</a></li>
+                            <li><a href="#">Task Management</a></li>
+                            <li><a href="#">Resource Allocation</a></li>
+                            <li><a href="#">Time Tracking</a></li>
+                            <li><a href="#">Gantt Charts</a></li>
+                            <li><a href="#">Milestones & Deadlines</a></li>
+                            <li><a href="#">Budget vs Actual</a></li>
+                        </div>
+                    </ul>
+                </li>
+
+                <li>
+                    <button onclick = toggleSubMenu(this) class="dropdown_btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h240l80 80h320q33 0 56.5 23.5T880-640v400q0 33-23.5 56.5T800-160H160Zm0-80h640v-400H447l-80-80H160v480Zm0 0v-480 480Z"/></svg>
+                        <span>Documents & Records</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id = "sidebar-arrow"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+
+                    <ul class="sub-menu">
+                        <div>
+                            <li><a href="#">Document Management System</a></li>
+                            <li><a href="#">Policy Repository</a></li>
+                            <li><a href="#">Contracts & Agreements</a></li>
+                            <li><a href="#">Version Control</a></li>
+                            <li><a href="#">Document Sharing</a></li>
+                        </div>
+                    </ul>
+                </li>
+
+                <li>
+                    <button onclick = toggleSubMenu(this) class="dropdown_btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M80-120v-80h360v-447q-26-9-45-28t-28-45H240l120 280q0 50-41 85t-99 35q-58 0-99-35t-41-85l120-280h-80v-80h247q12-35 43-57.5t70-22.5q39 0 70 22.5t43 57.5h247v80h-80l120 280q0 50-41 85t-99 35q-58 0-99-35t-41-85l120-280H593q-9 26-28 45t-45 28v447h360v80H80Zm585-320h150l-75-174-75 174Zm-520 0h150l-75-174-75 174Zm335-280q17 0 28.5-11.5T520-760q0-17-11.5-28.5T480-800q-17 0-28.5 11.5T440-760q0 17 11.5 28.5T480-720Z"/></svg>
+                        <span>Legal & Compliance</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id = "sidebar-arrow"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+
+                    <ul class="sub-menu">
+                        <div>
+                            <li><a href="#">Compliance Tracker</a></li>
+                            <li><a href="#">Case Management</a></li>
+                            <li><a href="#">Policy Management</a></li>
+                            <li><a href="#">Risk Assessment Tools</a></li>
+                            <li><a href="#">Regulatory Reporting</a></li>
+                        </div>
+                    </ul>
+                </li>
+
+                <li>
+                    <button onclick = toggleSubMenu(this) class="dropdown_btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M440-120v-80h320v-284q0-117-81.5-198.5T480-764q-117 0-198.5 81.5T200-484v244h-40q-33 0-56.5-23.5T80-320v-80q0-21 10.5-39.5T120-469l3-53q8-68 39.5-126t79-101q47.5-43 109-67T480-840q68 0 129 24t109 66.5Q766-707 797-649t40 126l3 52q19 9 29.5 27t10.5 38v92q0 20-10.5 38T840-249v49q0 33-23.5 56.5T760-120H440Zm-80-280q-17 0-28.5-11.5T320-440q0-17 11.5-28.5T360-480q17 0 28.5 11.5T400-440q0 17-11.5 28.5T360-400Zm240 0q-17 0-28.5-11.5T560-440q0-17 11.5-28.5T600-480q17 0 28.5 11.5T640-440q0 17-11.5 28.5T600-400Zm-359-62q-7-106 64-182t177-76q89 0 156.5 56.5T720-519q-91-1-167.5-49T435-698q-16 80-67.5 142.5T241-462Z"/></svg>
+                        <span>IT & Support</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id = "sidebar-arrow"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+
+                    <ul class="sub-menu">
+                        <div>
+                            <li><a href="#">IT Asset Management</a></li>
+                            <li><a href="#">Helpdesk / Ticketing System</a></li>
+                            <li><a href="#">Access Control</a></li>
+                            <li><a href="#">Software Licensing</a></li>
+                            <li><a href="#">Incident Reports</a></li>
+                            <li><a href="#">Internal Tools Portal</a></li>
+                        </div>
+                    </ul>
+                </li>
+
+                <li>
+                    <button onclick = toggleSubMenu(this) class="dropdown_btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M185-80q-17 0-29.5-12.5T143-122v-105q0-90 56-159t144-88q-40 28-62 70.5T259-312v190q0 11 3 22t10 20h-87Zm147 0q-17 0-29.5-12.5T290-122v-190q0-70 49.5-119T459-480h189q70 0 119 49t49 119v64q0 70-49 119T648-80H332Zm148-484q-66 0-112-46t-46-112q0-66 46-112t112-46q66 0 112 46t46 112q0 66-46 112t-112 46Z"/></svg>
+                        <span>Customer Portal</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id = "sidebar-arrow"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+
+                    <ul class="sub-menu">
+                        <div>
+                            <li><a href="#">Self-Service Portal</a></li>
+                            <li><a href="#">Order Tracking</a></li>
+                            <li><a href="#">Support Requests</a></li>
+                            <li><a href="#">Invoice Downloads</a></li>
+                            <li><a href="#">Document Sharing</a></li>
+                            <li><a href="#">Live Chat / Messaging</a></li>
+                        </div>
+                    </ul>
+                </li>
+
+                <li>
+                    <button onclick = toggleSubMenu(this) class="dropdown_btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M320-480v-80h320v80H320Zm0-160v-80h320v80H320Zm-80 240h300q29 0 54 12.5t42 35.5l84 110v-558H240v400Zm0 240h442L573-303q-6-8-14.5-12.5T540-320H240v160Zm480 80H240q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h480q33 0 56.5 23.5T800-800v640q0 33-23.5 56.5T720-80Zm-480-80v-640 640Zm0-160v-80 80Z"/></svg>
+                        <span>Analytics & Reports</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id = "sidebar-arrow"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+                    
+                    <ul class="sub-menu">
+                        <div>
+                            <li><a href="#">Custom Report Builder</a></li>
+                            <li><a href="#">Department-Specific Dashboards</a></li>
+                            <li><a href="#">Scheduled Reports</a></li>
+                            <li><a href="#">Export Tools</a></li>
+                            <li><a href="#">Business Intelligence Integration</a></li>
+                        </div>
+                    </ul>
+                </li>
+
+                <li>
+                    <button onclick = toggleSubMenu(this) class="dropdown_btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-440q-59 0-99.5-40.5T340-580q0-59 40.5-99.5T480-720q59 0 99.5 40.5T620-580q0 59-40.5 99.5T480-440Zm0-80q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17Zm0 440q-139-35-229.5-159.5T160-516v-244l320-120 320 120v244q0 152-90.5 276.5T480-80Zm0-400Zm0-315-240 90v189q0 54 15 105t41 96q42-21 88-33t96-12q50 0 96 12t88 33q26-45 41-96t15-105v-189l-240-90Zm0 515q-36 0-70 8t-65 22q29 30 63 52t72 34q38-12 72-34t63-52q-31-14-65-22t-70-8Z"/></svg>
+                        <span>Security & Administration</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id = "sidebar-arrow"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+
+                    <ul class="sub-menu">
+                        <div>
+                            <li><a href="#">User Roles & Permissions</a></li>
+                            <li><a href="#">Audit Logs</a></li>
+                            <li><a href="#">Multi-Factor Authentication</a></li>
+                            <li><a href="#">Data Backup Settings</a></li>
+                            <li><a href="#">API Access Management</a></li>
+                            <li><a href="#">IP Whitelisting</a></li>
+                        </div>
+                    </ul>
+                </li>
+
+                <li>
+                    <button onclick = toggleSubMenu(this) class="dropdown_btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="m370-80-16-128q-13-5-24.5-12T307-235l-119 50L78-375l103-78q-1-7-1-13.5v-27q0-6.5 1-13.5L78-585l110-190 119 50q11-8 23-15t24-12l16-128h220l16 128q13 5 24.5 12t22.5 15l119-50 110 190-103 78q1 7 1 13.5v27q0 6.5-2 13.5l103 78-110 190-118-50q-11 8-23 15t-24 12L590-80H370Zm70-80h79l14-106q31-8 57.5-23.5T639-327l99 41 39-68-86-65q5-14 7-29.5t2-31.5q0-16-2-31.5t-7-29.5l86-65-39-68-99 42q-22-23-48.5-38.5T533-694l-13-106h-79l-14 106q-31 8-57.5 23.5T321-633l-99-41-39 68 86 64q-5 15-7 30t-2 32q0 16 2 31t7 30l-86 65 39 68 99-42q22 23 48.5 38.5T427-266l13 106Zm42-180q58 0 99-41t41-99q0-58-41-99t-99-41q-59 0-99.5 41T342-480q0 58 40.5 99t99.5 41Zm-2-140Z"/></svg>
+                        <span>System Settings</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id = "sidebar-arrow"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+
+                    <ul class="sub-menu">
+                        <div>
+                            <li><a href="#">Company Profile</a></li>
+                            <li><a href="#">Localization</a></li>
+                            <li><a href="#">Workflow Automation</a></li>
+                            <li><a href="#">Email & Notification Settings</a></li>
+                            <li><a href="#">Integration Settings</a></li>
+                            <li><a href="#">Theme/Appearance Settings</a></li>
+                        </div>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <main>
+            <div class="container">
+                <h2>Heading</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus facere earum eaque fugit sapiente. Eligendi exercitationem assumenda iure, nesciunt dicta neque? Quasi provident optio aspernatur debitis, quibusdam animi nisi unde.</p>
+            </div>
+            <div class="container">
+                <h2>Heading</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus facere earum eaque fugit sapiente. Eligendi exercitationem assumenda iure, nesciunt dicta neque? Quasi provident optio aspernatur debitis, quibusdam animi nisi unde.</p>
+            </div>
+            <div class="container">
+                <h2>Heading</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus facere earum eaque fugit sapiente. Eligendi exercitationem assumenda iure, nesciunt dicta neque? Quasi provident optio aspernatur debitis, quibusdam animi nisi unde.</p>
+            </div>
+            <div class="container">
+                <h2>Heading</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus facere earum eaque fugit sapiente. Eligendi exercitationem assumenda iure, nesciunt dicta neque? Quasi provident optio aspernatur debitis, quibusdam animi nisi unde.</p>
+            </div>
+            <div class="container">
+                <h2>Heading</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus facere earum eaque fugit sapiente. Eligendi exercitationem assumenda iure, nesciunt dicta neque? Quasi provident optio aspernatur debitis, quibusdam animi nisi unde.</p>
+            </div>
+            <div class="container">
+                <h2>Heading</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus facere earum eaque fugit sapiente. Eligendi exercitationem assumenda iure, nesciunt dicta neque? Quasi provident optio aspernatur debitis, quibusdam animi nisi unde.</p>
+            </div>
+            <div class="container">
+                <h2>Heading</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus facere earum eaque fugit sapiente. Eligendi exercitationem assumenda iure, nesciunt dicta neque? Quasi provident optio aspernatur debitis, quibusdam animi nisi unde.</p>
+            </div>
+            <div class="container">
+                <h2>Heading</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus facere earum eaque fugit sapiente. Eligendi exercitationem assumenda iure, nesciunt dicta neque? Quasi provident optio aspernatur debitis, quibusdam animi nisi unde.</p>
+            </div>
+            <div class="container">
+                <h2>Heading</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus facere earum eaque fugit sapiente. Eligendi exercitationem assumenda iure, nesciunt dicta neque? Quasi provident optio aspernatur debitis, quibusdam animi nisi unde.</p>
+            </div>
+            <div class="container">
+                <h2>Heading</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus facere earum eaque fugit sapiente. Eligendi exercitationem assumenda iure, nesciunt dicta neque? Quasi provident optio aspernatur debitis, quibusdam animi nisi unde.</p>
+            </div>
+        </main>
+    </body>
+</html>

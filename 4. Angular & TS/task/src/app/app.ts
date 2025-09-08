@@ -14,10 +14,13 @@ export class App {
   myname = signal("ali");
   myage = signal(23);
   amhappy = signal(false);
+  disabled = signal(false);
 
   buttonhandler() {
     console.log("Button Pressed")
-    
+    if (!this.amhappy()) {
     this.amhappy.update(v => true);
+      this.disabled.update(v => true);
+    }
   }
 }

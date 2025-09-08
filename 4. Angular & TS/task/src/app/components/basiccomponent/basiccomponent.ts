@@ -7,7 +7,7 @@ import { Component, input } from '@angular/core';
   styleUrl: './basiccomponent.scss'
 })
 export class Basiccomponent {
-  name    = input();
-  age     = input();
-  ishappy = input();
+  name    = input("");
+  age     = input(0);
+  ishappy = input(false);
 }

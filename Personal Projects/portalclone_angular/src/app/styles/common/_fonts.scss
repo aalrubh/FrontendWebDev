@@ -1,0 +1,19 @@
+
+/*
+    This file is used for default fonts and their weights
+*/
+
+$font-stack:  Arial, "Segoe UI", "Times New Roman", Times, serif;
+
+$font-weights: (
+    "light": 300,
+    "regular": 400,
+    "medium": 500,
+    "semibold": 600,
+    "bold": 700
+);
+
+
+@function weight($selected-weight: regular) {
+    @return map-get($font-weights,$selected-weight);
+}

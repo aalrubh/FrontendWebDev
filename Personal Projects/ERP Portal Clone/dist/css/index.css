@@ -34,6 +34,7 @@ ul {
   padding: 20px 1em;
   width: 350px;
   text-wrap: nowrap;
+  overflow: hidden;
   transition: 300ms ease-in-out;
 }
 #side-bar #logo-item {

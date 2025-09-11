@@ -1,0 +1,5 @@
+<div>
+    <portal-header (collapseToggle)="collapsed = !collapsed"></portal-header>
+    <portal-sidebar [isSidebarCollapsed]="collapsed" (requestExpand)="collapsed = false"></portal-sidebar>
+    <portal-footer></portal-footer>
+</div>

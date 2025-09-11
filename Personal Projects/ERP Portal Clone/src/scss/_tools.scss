@@ -1,8 +1,0 @@
-
-@mixin FlexCell($direction: row, $vertical-alignment: none, $horizontal-alignment: none) {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: $horizontal-alignment;
-    justify-content: $vertical-alignment;
-    flex-direction: $direction;
-}

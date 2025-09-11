@@ -6,7 +6,7 @@ interface Car {
     isElectric: boolean;
 }
 
-function calculateArea(width: number, height: number) {
+function calculateArea(width: number, height: number) : number {
     return width * height;
 }
 
